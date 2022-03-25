@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import "components/Application.scss";
 import DayList from "./DayList";
+
 export default function Application(props) {
   const days = [
     {
