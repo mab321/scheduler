@@ -40,13 +40,14 @@ export default function Appointment(props) {
         })
 
     }
-    const DeleteInterview = () => {
+    const DeleteInterview = (appointmentID) => {
        transition(DELETING, true);
        props.cancelInterview(props.id)
        .then(() => {
           transition(EMPTY);
        })
        .catch((error) => {
+          console.log("Could not delete appointment error", error);
           transition(ERROR_DELETE, true);
        })
 
@@ -84,13 +85,13 @@ export default function Appointment(props) {
             onSave={save} />
         )}
         {mode === SAVING && <Status message={"SAVING"}/>}
-        {mode === CONFIRM && <Confirm  onConfirm={DeleteInterview} onCancel={() => transition(SHOW)}/>}
+        {mode === CONFIRM && <Confirm  onConfirm={() => DeleteInterview(props.id)} onCancel={() => transition(SHOW)}/>}
         {mode === DELETING && <Status message={"DELETING"}/>}
         {mode === ERROR_SAVE && (
         <Error
          message={"Server could not save appointment"}
           onClose={back}/>)}
-          
+
         {mode === ERROR_DELETE && (
         <Error 
         message={"Server could not delete appointment"} 
