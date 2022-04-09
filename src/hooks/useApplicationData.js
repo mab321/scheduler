@@ -12,13 +12,17 @@ export default function useApplicationData() {
   
   // handle updating spots remaining
   const updatingSpots = function (state, appointments ,appointmentId, remove = true) {
-    // check if the id exists in state.days.appointments to differentiate update from create
-    const copyDay = {...state.days.find((myDay) => myDay.appointments.include(appointmentId))};
-    console.log("update spot", copyDay);
+    
+  // check if the id exists in state.days.appointments to differentiate update from create
+    const daysToCopy = [...state.days];
+    //console.log("daysToCpy",daysToCopy);
+    const copyDay = daysToCopy.find((d) => d.appointments.includes(appointmentId));
+    //console.log("updating copyDay", copyDay);
     const finalDayIndex = [...state.days].findIndex((myDay) => myDay.id === copyDay.id);
+    //console.log("finalDay", finalDayIndex);
     const checkAppointments = appointments[appointmentId].interview;
-    // check delete or Create operation and do not do anything to spots when just updating
-
+  // console.log("checkAppoitnments",checkAppointments);
+   // check delete or Create operation and do not do anything to spots when just updating
     if (remove && checkAppointments !== null) {
       copyDay.spots = copyDay.spots - 1;
     } else if(!remove) {
@@ -26,10 +30,11 @@ export default function useApplicationData() {
     }
 
     const updatingDays = [...state.days];
+    //console.log("updatingDays",updatingDays)
     updatingDays[finalDayIndex].spots = copyDay.spots;
+    //console.log("day changed",updatingDays[finalDayIndex]);
 
     return updatingDays;
-
 
   }
   
