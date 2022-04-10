@@ -22,7 +22,7 @@ describe("Booking", () => {
     
     // Confirm booked appointment
     cy.contains(".appointment__card--show","Luke Skywalker" );
-    
+    cy.contains(".appointment__card--show", "Sylvia Palmer");
 
   });
   
