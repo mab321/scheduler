@@ -3,10 +3,10 @@ This project is a single-page application meant to allow students to book interv
 This scheduler is based on a 5 work day schedule with a maximum of 5 appointments per day. This application is setup in conjunction with [scheduler-api].
 
 #**Features**
--Appointments booking for 5 days.
--choosing interviewers.
-- editing appointments.
-- Deleting appointments.
+*Appointments booking for 5 days.
+*Choosing interviewers.
+*Editing appointments.
+*Deleting appointments.
 ## Setup
 
 Install dependencies with `npm install`.
