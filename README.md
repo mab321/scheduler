@@ -37,5 +37,5 @@ npm run storybook
 ## Create appointment
 ![Create Appointment](https://github.com/mab321/scheduler/blob/master/documents/showAppointment.png?raw=true)
 ## Edit Appointment
-![]()
-![]()
+![Before edit appointment](https://github.com/mab321/scheduler/blob/master/documents/highlightAppointment.png?raw=true)
+![After Edit appointment](https://github.com/mab321/scheduler/blob/master/documents/displayEdit.png?raw=true)
