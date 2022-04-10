@@ -7,7 +7,7 @@ import React from "react";
     onDelete:Function to be called when the user clicks the Delete button
 */
 export default function Show(props) {
-   console.log(props.interviewer.name);
+   
 
    return (
     <main className="appointment__card appointment__card--show">
