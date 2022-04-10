@@ -31,5 +31,11 @@ npm run storybook
 ```
 # Usage Screenshots
 ## Delete Appointment
+![Delete First appointment](https://github.com/mab321/scheduler/blob/master/documents/highlightAppointment.png?raw=true)
+![Confirm Delete](https://github.com/mab321/scheduler/blob/master/documents/confirmDeleteAppointment.png?raw=true)
+![Deleted appointment](https://github.com/mab321/scheduler/blob/master/documents/DeletedAppointment.png?raw=true)
 ## Create appointment
+![Create Appointment](https://github.com/mab321/scheduler/blob/master/documents/showAppointment.png?raw=true)
 ## Edit Appointment
+![]()
+![]()
