@@ -1,6 +1,6 @@
 # Interview Scheduler
 This project is a single-page application meant to allow students to book interviews with their mentors.
-This scheduler is based on a 5 work day schedule with a maximum of 5 appointments per day. This application is setup in conjunction with [scheduler-api].
+This scheduler is based on a 5 work day schedule with a maximum of 5 appointments per day. This application is setup in conjunction with [scheduler-api](https://github.com/mab321/scheduler-api).
 
 #**Features**
 
