@@ -1,5 +1,12 @@
 # Interview Scheduler
+This project is a single-page application meant to allow students to book interviews with their mentors.
+This scheduler is based on a 5 work day schedule with a maximum of 5 appointments per day. This application is setup in conjunction with [scheduler-api].
 
+#**Features**
+-Appointments booking for 5 days.
+-choosing interviewers.
+- editing appointments.
+- Deleting appointments.
 ## Setup
 
 Install dependencies with `npm install`.
@@ -21,3 +28,7 @@ npm test
 ```sh
 npm run storybook
 ```
+# Usage Screenshots
+## Delete Appointment
+## Create appointment
+## Edit Appointment
