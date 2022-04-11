@@ -32,6 +32,10 @@ export default function Appointment(props) {
          interviewer
        };
        transition(SAVING);
+       if (!name || !interviewer) {
+         return transition(ERROR_SAVE, true);
+       }
+       
        props.bookInterview(props.id, interview)
         .then(() => transition(SHOW))
         .catch((error) => {
@@ -51,9 +55,6 @@ export default function Appointment(props) {
        })
 
     }
-
-  
-
 
    return (
     <article className="appointment">
