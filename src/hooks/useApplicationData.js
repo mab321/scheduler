@@ -15,17 +15,11 @@ export default function useApplicationData() {
     
   // check if the id exists in state.days.appointments to differentiate update from create
     const daysToCopy = [...state.days];
-    console.log("daysToCpy",daysToCopy);
     const copyDay = daysToCopy.find((d) => d.appointments.includes(appointmentId));
-    console.log("updating copyDay", copyDay);
     const finalDayIndex = [...state.days].findIndex((myDay) => myDay.id === copyDay.id);
-    console.log("finalDay", finalDayIndex);
     //check if previous state is null and current appointment
     const previousAppointment = state.appointments[appointmentId].interview;
-    console.log("previous appointment",previousAppointment);
     const checkAppointments = appointments[appointmentId].interview;
-   console.log("checkAppoitnments",checkAppointments);
-  
    // check delete or Create operation and do not do anything to spots when just updating
     if (remove && checkAppointments !== null && previousAppointment === null) {
       copyDay.spots = copyDay.spots - 1;
@@ -34,12 +28,8 @@ export default function useApplicationData() {
     }
 
     const updatingDays = [...state.days];
-    console.log("updatingDays",updatingDays)
     updatingDays[finalDayIndex].spots = copyDay.spots;
-    console.log("day changed",updatingDays[finalDayIndex]);
-
     return updatingDays;
-
   }
   
   useEffect(() => {
@@ -50,14 +40,12 @@ export default function useApplicationData() {
       axios.get('/api/interviewers')
     ]).then((all) => {
       setState(prev => ({ ...prev, days: all[0].data, appointments: all[1].data, interviewers: all[2].data }));
-      console.log("all",all);
     })
     
   }, []);
 
 
   const bookInterview = function(id, interview) {
-    console.log(id, interview);
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }

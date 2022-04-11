@@ -1,6 +1,4 @@
-import React, { Fragment } from 'react'
-
-
+import React, { Fragment } from 'react';
 import "./style.scss";
 import Header from "./Header";
 import Show from "./Show";
@@ -10,6 +8,7 @@ import Status from './Status';
 import Confirm from './Confirm';
 import Error from './Error';
 import useVisualMode from 'hooks/useVisualMode';
+
 export default function Appointment(props) {
 
    const EMPTY = "EMPTY";
